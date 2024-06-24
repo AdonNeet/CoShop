@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class MetodePembayaran extends Model
+{
+    use HasFactory;
+
+    protected $table = 'metode_pembayaran';
+    protected $primaryKey = 'idMetodePembayaran';
+    protected $keyType = 'string';
+
+    protected $fillable = [
+        'idMetodePembayaran', 'nama'
+    ];
+
+    public function pembayaran()
+    {
+        return $this->hasMany(Pembayaran::class, 'idMetodePembayaran');
+    }
+}
