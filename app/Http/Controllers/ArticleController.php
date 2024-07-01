@@ -16,6 +16,7 @@ class ArticleController extends Controller
       // sesuaikan DB
       // $article = Article::all();
       // $getBrand = Article::with('getBrand')->get();
+      
       return view('backend.article.index'
         // ,compact('article','getBrand')
       );
@@ -72,7 +73,7 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function detail($id)
     {
       // sesuaikan DB
       // $article = Article::find($id);
